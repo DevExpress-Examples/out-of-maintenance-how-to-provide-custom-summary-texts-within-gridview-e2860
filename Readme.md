@@ -7,6 +7,9 @@
 * [SummaryPartial.ascx](./CS/GridView.Summary/Views/GridView/SummaryPartial.ascx) (VB: [SummaryPartial.ascx](./VB/GridView.Summary/Views/GridView/SummaryPartial.ascx))
 <!-- default file list end -->
 # How to provide custom summary texts within GridView
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2860)**
+<!-- run online end -->
 
 
 <p>This sample demonstrates how to use the SummaryDisplayText delegate method to define custom texts for group and total summaries displayed within the GridView.</p>
