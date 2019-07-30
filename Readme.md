@@ -8,7 +8,7 @@
 <!-- default file list end -->
 # How to provide custom summary texts within GridView
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e2860)**
+**[[Run Online]](https://codecentral.devexpress.com/e2860/)**
 <!-- run online end -->
 
 
