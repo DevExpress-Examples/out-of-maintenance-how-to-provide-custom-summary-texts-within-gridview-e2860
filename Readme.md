@@ -12,7 +12,7 @@
 <!-- run online end -->
 
 
-<p>This sample demonstrates how to use the SummaryDisplayText delegate method to define custom texts for group and total summaries displayed within the GridView.</p> 
+<p>This sample demonstrates how to use the SummaryDisplayText delegate method to define custom texts for group and total summaries displayed within the GridView.</p>
 
 <br/>
 
