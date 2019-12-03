@@ -11,18 +11,20 @@ Namespace GridView.Summary
 	' visit http://go.microsoft.com/?LinkId=9394801
 
 	Public Class MvcApplication
-		Inherits System.Web.HttpApplication
-		Public Shared Sub RegisterRoutes(ByVal routes As RouteCollection)
-			routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
+        Inherits System.Web.HttpApplication
+        Protected Sub Application_Start()
+            AreaRegistration.RegisterAllAreas()
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
+            RouteConfig.RegisterRoutes(RouteTable.Routes)
 
-			routes.MapRoute("Default", "{controller}/{action}/{id}", New With {Key .controller = "GridView", Key .action = "Index", Key .id = UrlParameter.Optional})
+            ModelBinders.Binders.DefaultBinder = New DevExpress.Web.Mvc.DevExpressEditorsBinder()
+            AddHandler DevExpress.Web.ASPxWebControl.CallbackError, AddressOf Application_Error
+        End Sub
 
-		End Sub
+        Protected Sub Application_Error(ByVal sender As Object, ByVal e As EventArgs)
+            Dim exception As Exception = System.Web.HttpContext.Current.Server.GetLastError()
+            'TODO: Handle Exception
+        End Sub
 
-		Protected Sub Application_Start()
-			AreaRegistration.RegisterAllAreas()
-
-			RegisterRoutes(RouteTable.Routes)
-		End Sub
-	End Class
+    End Class
 End Namespace

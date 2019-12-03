@@ -6,25 +6,20 @@ using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace GridView.Summary {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : System.Web.HttpApplication {
-        public static void RegisterRoutes(RouteCollection routes) {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "GridView", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
-
-        }
-
         protected void Application_Start() {
             AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
+            ModelBinders.Binders.DefaultBinder = new DevExpress.Web.Mvc.DevExpressEditorsBinder();
 
-            RegisterRoutes(RouteTable.Routes);
+            DevExpress.Web.ASPxWebControl.CallbackError += Application_Error;
+        }
+
+        protected void Application_Error(object sender, EventArgs e) {
+            Exception exception = System.Web.HttpContext.Current.Server.GetLastError();
+            //TODO: Handle Exception
         }
     }
 }

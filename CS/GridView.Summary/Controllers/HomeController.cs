@@ -7,7 +7,7 @@ using GridView.Summary.Models;
 
 namespace GridView.Summary.Controllers {
     [HandleError]
-    public class GridViewController : Controller {
+    public class HomeController : Controller {
         public ActionResult Index() {
             return Summary();
         }
