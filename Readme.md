@@ -1,10 +1,10 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [GridViewController.cs](./CS/GridView.Summary/Controllers/GridViewController.cs) (VB: [GridViewController.vb](./VB/GridView.Summary/Controllers/GridViewController.vb))
+* [HomeController.cs](./CS/GridView.Summary/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/GridView.Summary/Controllers/HomeController.vb))
 * [Northwind.cs](./CS/GridView.Summary/Models/Northwind.cs) (VB: [Northwind.vb](./VB/GridView.Summary/Models/Northwind.vb))
-* [Summary.aspx](./CS/GridView.Summary/Views/GridView/Summary.aspx) (VB: [Summary.aspx](./VB/GridView.Summary/Views/GridView/Summary.aspx))
-* [SummaryPartial.ascx](./CS/GridView.Summary/Views/GridView/SummaryPartial.ascx) (VB: [SummaryPartial.ascx](./VB/GridView.Summary/Views/GridView/SummaryPartial.ascx))
+* [Summary.cshtml](./CS/GridView.Summary/Views/Home/Summary.cshtml) (VB: [Summary.vbhtml](./VB/GridView.Summary/Views/Home/Summary.vbhtml))
+* [SummaryPartial.cshtml](./CS/GridView.Summary/Views/Home/SummaryPartial.cshtml) (VB: [SummaryPartial.vbhtml](./VB/GridView.Summary/Views/Home/SummaryPartial.vbhtml))
 <!-- default file list end -->
 # How to provide custom summary texts within GridView
 <!-- run online -->
